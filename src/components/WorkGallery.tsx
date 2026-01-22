@@ -18,8 +18,9 @@ const WorkshopGallerySection = () => {
       className: "md:col-span-1 md:row-span-1",
     },
     {
-      title: "Gayatri Vidya Parishad College of Engineering (Autonomous) (GVP) (GVPCE)",
-      meta: " Gen Ai Workshop,• Campus Session",
+      title:
+        "Gayatri Vidya Parishad College of Engineering (Autonomous) (GVP) (GVPCE)",
+      meta: "Gen Ai Workshop • Campus Session",
       img: GayathriImg,
       className: "md:col-span-1 md:row-span-1",
     },
@@ -47,13 +48,13 @@ const WorkshopGallerySection = () => {
       img: AvcollegeImg,
       className: "md:col-span-1 md:row-span-1",
     },
-     {
+    {
       title: "SRI PADMAVATI MAHILA VISVAVIDYALAYAM",
       meta: "Training Program • DataScience",
       img: padmavathiImg,
       className: "md:col-span-1 md:row-span-1",
     },
-     {
+    {
       title: "Aurora’s Engineering College",
       meta: "POWER BI Workshop • Practical Lab Session",
       img: AuroraImg,
@@ -107,7 +108,9 @@ const WorkshopGallerySection = () => {
                   <img
                     src={a.img}
                     alt={a.title}
-                    className="h-60 md:h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    className={`h-60 md:h-64 w-full transition-transform duration-500 group-hover:scale-[1.04]
+                      ${i === 4 ? "object-contain bg-black/5 p-2" : "object-cover"}
+                    `}
                     loading="lazy"
                   />
 
