@@ -55,7 +55,7 @@ const WorkshopGallerySection = () => {
       className: "md:col-span-1 md:row-span-1",
     },
     {
-      title: "Aurora’s Engineering College",
+      title: "Andhra Mahila Sabha (AMS) Arts & Science College for Women",
       meta: "POWER BI Workshop • Practical Lab Session",
       img: AuroraImg,
       className: "md:col-span-1 md:row-span-1",
