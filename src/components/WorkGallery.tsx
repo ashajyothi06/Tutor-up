@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 // ✅ Your real images from src/assets
-import AdithyaImg from "../assets/adithya-1.png";
-import GayathriImg from "../assets/gayathri-1.png";
-import CMRImg from "../assets/CMR-1.png";
+import AdithyaImg from "../assets/adithya11.png";
+import GayathriImg from "../assets/gayathri11.png";
+import CMRImg from "../assets/CMR11.png";
 import AuroraImg from "../assets/aurora-org.png";
 import ComboImg from "../assets/combined_horizontal.jpg";
 import AvcollegeImg from "../assets/AVCollege-org.png";
