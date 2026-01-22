@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import AdithyaImg from "../assets/adithya-1.png";
 import GayathriImg from "../assets/gayathri-1.png";
 import CMRImg from "../assets/CMR-1.png";
-import AuroraImg from "../assets/aurora.png";
-import ComboImg from "../assets/combined_college_horizontal.png";
-import AvcollegeImg from "../assets/AVCollege11.png";
+import AuroraImg from "../assets/aurora-org.png";
+import ComboImg from "../assets/combined_horizontal.jpg";
+import AvcollegeImg from "../assets/AVCollege-org.png";
 import padmavathiImg from "../assets/padmavathi.jpeg";
 
 const WorkshopGallerySection = () => {
