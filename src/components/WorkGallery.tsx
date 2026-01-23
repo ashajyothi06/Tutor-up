@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 
 // ✅ Your real images from src/assets
 import AdithyaImg from "../assets/adithya11.png";
-import GayathriImg from "../assets/gayathri11.png";
-import CMRImg from "../assets/CMR11.png";
+import GayathriImg from "../assets/gayathri-2.jpeg";
+import CMRImg from "../assets/geo_moved_up_even_more.png";
 import AuroraImg from "../assets/aurora-org.png";
-import ComboImg from "../assets/combined_horizontal.jpg";
-import AvcollegeImg from "../assets/AVCollege-org.png";
-import padmavathiImg from "../assets/padmavathi.jpeg";
+import ComboImg from "../assets/combined_3_horizontal_same_height_last_middle.png";
+import AvcollegeImg from "../assets/av.jpeg";
+import padmavathiImg from "../assets/padmavathi2.jpeg";
+import amsImg from "../assets/ams.jpeg";
 
 const WorkshopGallerySection = () => {
   const albums = [
@@ -44,20 +45,20 @@ const WorkshopGallerySection = () => {
     },
     {
       title: "A.V. College of Arts, Science & Commerce",
-      meta: "DataScience Workshop • AI Awareness Session",
+      meta: "PowerBI Workshop • AI Awareness Session",
       img: AvcollegeImg,
       className: "md:col-span-1 md:row-span-1",
     },
     {
-      title: "SRI PADMAVATI MAHILA VISVAVIDYALAYAM",
-      meta: "Training Program • DataScience",
-      img: padmavathiImg,
+      title: "Andhra Mahila Sabha (AMS) Arts & Science College for Women",
+      meta: "Machine Learning Workshop • DataScience",
+      img: amsImg,
       className: "md:col-span-1 md:row-span-1",
     },
     {
-      title: "Andhra Mahila Sabha (AMS) Arts & Science College for Women",
+      title: "SRI PADMAVATI MAHILA VISVAVIDYALAYAM",
       meta: "POWER BI Workshop • Practical Lab Session",
-      img: AuroraImg,
+      img: padmavathiImg,
       className: "md:col-span-1 md:row-span-1",
     },
   ];
@@ -108,7 +109,7 @@ const WorkshopGallerySection = () => {
                   <img
                     src={a.img}
                     alt={a.title}
-                    className={`h-60 md:h-64 w-full transition-transform duration-500 group-hover:scale-[1.04]
+                    className={`h-64 md:h-72 w-full transition-transform duration-500 group-hover:scale-[1.04]
                       ${i === 4 ? "object-contain bg-black/5 p-2" : "object-cover"}
                     `}
                     loading="lazy"
