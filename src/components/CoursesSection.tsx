@@ -10,76 +10,84 @@ interface CourseDetails {
   gradientTo: string;
   description: string;
   classRange: string;
-  price: string;
+  info: string; // ✅ shown under class range in modal
 }
 
 const CoursesSection = () => {
   const [selectedCourse, setSelectedCourse] = useState<CourseDetails | null>(null);
 
   const courses: CourseDetails[] = [
-    { 
-      name: 'SSC', 
+    {
+      name: 'SSC',
       gradientFrom: '#10b981',
       gradientTo: '#059669',
-      description: 'Grades 1-10: Comprehensive SSC curriculum covering all core subjects with focus on board exam preparation and conceptual understanding.',
+      description:
+        'SSC syllabus coaching for Classes 1–10 with strong focus on fundamentals, school exams, and board preparation.',
       classRange: 'Class I-X',
-      price: 'Full access for less than $1 a day'
+      info: 'Core subjects • Concept clarity • Board-focused practice',
     },
-    { 
-      name: 'CBSE', 
+    {
+      name: 'CBSE',
       gradientFrom: '#f97316',
       gradientTo: '#ea580c',
-      description: 'Grades 1-12: Complete CBSE syllabus with NCERT-aligned content, practice papers, and expert guidance for board exams.',
+      description:
+        'CBSE coaching for Classes 1–12 aligned with NCERT, including concept clarity, practice sessions, and board exam guidance.',
       classRange: 'Class I-XII',
-      price: 'Full access for less than $1 a day'
+      info: 'NCERT aligned • Sample papers • Board exam support',
     },
-    { 
-      name: 'ISC', 
+    {
+      name: 'ISC',
       gradientFrom: '#a855f7',
       gradientTo: '#9333ea',
-      description: 'Grades 1-10: Solid foundation in ISC-approved subjects, fostering strong academic skills and knowledge. 1st and 2nd Year: Advanced tutoring for ISC intermediate students, focusing on thorough subject comprehension and exam readiness.',
+      description:
+        'ISC subject coaching with structured learning for Classes 1–10 and focused preparation support for Intermediate students.',
       classRange: 'Class I-X',
-      price: 'Full access for less than $1 a day'
+      info: 'Detailed learning • Strong fundamentals • Exam readiness',
     },
-    { 
-      name: 'ICSE', 
+    {
+      name: 'ICSE',
       gradientFrom: '#ec4899',
       gradientTo: '#db2777',
-      description: 'Grades 1-10: Comprehensive ICSE curriculum with detailed subject coverage, application-based learning, and competitive exam preparation.',
+      description:
+        'ICSE coaching for Classes 1–10 with detailed subject coverage, application-based learning, and exam-oriented practice.',
       classRange: 'Class I-X',
-      price: 'Full access for less than $1 a day'
+      info: 'Application-based • Strong foundation • Practice tests',
     },
-    { 
-      name: 'IGCSE', 
+    {
+      name: 'IGCSE',
       gradientFrom: '#3b82f6',
       gradientTo: '#2563eb',
-      description: 'International curriculum covering Cambridge IGCSE subjects with global standards, critical thinking development, and university preparation.',
+      description:
+        'Cambridge IGCSE curriculum training with concept-building, critical thinking skills, and subject-wise preparation.',
       classRange: 'Class IX-X',
-      price: 'Full access for less than $1 a day'
+      info: 'Cambridge pattern • Critical thinking • Global standards',
     },
-    { 
-      name: 'Class XI-XII', 
+    {
+      name: 'Class XI-XII',
       gradientFrom: '#f59e0b',
       gradientTo: '#d97706',
-      description: 'Advanced level preparation for Class 11 and 12 students across all boards with focus on competitive exams and career readiness.',
+      description:
+        'Class 11 & 12 coaching across all boards with strong focus on subject mastery and competitive exam readiness.',
       classRange: 'Class XI-XII',
-      price: 'Full access for less than $1 a day'
+      info: 'Advanced concepts • Boards focus • Career readiness',
     },
-    { 
-      name: 'EAMCET', 
+    {
+      name: 'EAMCET',
       gradientFrom: '#06b6d4',
       gradientTo: '#0891b2',
-      description: 'Comprehensive EAMCET preparation with topic-wise modules, previous year papers, mock tests, and personalized coaching for engineering and medical aspirants.',
+      description:
+        'EAMCET coaching with topic-wise coverage, mock tests, previous papers, and exam-focused preparation strategy.',
       classRange: 'Intermediate',
-      price: 'Full access for less than $1 a day'
+      info: 'Topic-wise modules • Mock tests • Previous papers',
     },
-    { 
-      name: 'JEE MAINS', 
+    {
+      name: 'JEE MAINS',
       gradientFrom: '#1e293b',
       gradientTo: '#0f172a',
-      description: 'Complete JEE Main preparation covering Physics, Chemistry, and Mathematics with advanced problem-solving techniques and test strategies.',
+      description:
+        'JEE Main coaching for Physics, Chemistry, and Maths with advanced problem-solving, practice tests, and performance tracking.',
       classRange: 'Class XI-XII',
-      price: 'Full access for less than $1 a day'
+      info: 'PCM focus • Advanced problems • Test strategies',
     },
   ];
 
@@ -87,30 +95,28 @@ const CoursesSection = () => {
     'Tutorials by industry experts',
     'Peer & expert test review',
     'Intensive Learning',
-    'Access to our GitHub repos'
+    'Access to our GitHub repos',
   ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+      transition: { staggerChildren: 0.1 },
+    },
   };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
-        type: "spring" as const,
+        type: 'spring' as const,
         stiffness: 100,
-        damping: 15
-      }
-    }
+        damping: 15,
+      },
+    },
   };
 
   return (
@@ -137,19 +143,19 @@ const CoursesSection = () => {
             Choose Your <span className="text-gradient-cyan">Learning Path</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Explore our comprehensive curriculum designed for various educational boards and competitive exams
+            Explore our curriculum designed for different boards and competitive exams
           </p>
         </motion.div>
 
         {/* Cards grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {courses.map((course, index) => (
+          {courses.map((course) => (
             <motion.div
               key={course.name}
               variants={cardVariants}
@@ -163,22 +169,20 @@ const CoursesSection = () => {
                     {course.name}
                   </h3>
                 </div>
-                
+
                 {/* Colored corner badge with arrow */}
-                <div 
+                <div
                   className="absolute top-0 right-0 w-14 h-14 flex items-center justify-center overflow-hidden"
                   style={{
                     background: `linear-gradient(135deg, ${course.gradientFrom} 0%, ${course.gradientTo} 100%)`,
                     clipPath: 'polygon(100% 0, 0 0, 100% 100%)',
                   }}
                 >
-                  <ArrowUpRight 
-                    className="w-5 h-5 text-white absolute top-2.5 right-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" 
-                  />
+                  <ArrowUpRight className="w-5 h-5 text-white absolute top-2.5 right-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                 </div>
 
                 {/* Subtle bottom gradient line */}
-                <div 
+                <div
                   className="absolute bottom-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{
                     background: `linear-gradient(90deg, ${course.gradientFrom}, ${course.gradientTo})`,
@@ -195,35 +199,31 @@ const CoursesSection = () => {
         <DialogContent className="sm:max-w-lg p-0 overflow-hidden rounded-3xl border-0 shadow-2xl">
           <div className="p-8 pb-6">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-secondary font-display">
-                Join our community
-              </DialogTitle>
+              <DialogTitle className="text-2xl font-bold text-secondary font-display">Join our community</DialogTitle>
             </DialogHeader>
-            <p className="text-muted-foreground mt-4 leading-relaxed">
-              {selectedCourse?.description}
-            </p>
+            <p className="text-muted-foreground mt-4 leading-relaxed">{selectedCourse?.description}</p>
           </div>
 
           {/* Bottom section with two columns */}
           <div className="grid grid-cols-2">
             {/* Left - Yellow section */}
             <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 p-6">
-              <h4 className="text-xl font-bold text-secondary mb-3">
-                {selectedCourse?.classRange}
-              </h4>
-              <p className="text-secondary/80 text-sm mb-4">
-                {selectedCourse?.price}
-              </p>
-              <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full font-semibold shadow-lg">
-                Connect
-              </Button>
+              <h4 className="text-xl font-bold text-secondary mb-2">{selectedCourse?.classRange}</h4>
+
+              {/* ✅ updated info */}
+              <p className="text-secondary/80 text-sm mb-4 leading-relaxed">{selectedCourse?.info}</p>
+
+              {/* ✅ connect navigates to contact */}
+              <a href="#contact" className="block">
+                <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full font-semibold shadow-lg">
+                  Connect
+                </Button>
+              </a>
             </div>
 
             {/* Right - Teal section */}
             <div className="bg-gradient-to-br from-teal to-cyan p-6">
-              <h4 className="text-xl font-bold text-white mb-3">
-                Why Us
-              </h4>
+              <h4 className="text-xl font-bold text-white mb-3">Why Us</h4>
               <ul className="space-y-2">
                 {whyUsPoints.map((point) => (
                   <li key={point} className="text-white/90 text-sm flex items-center gap-2">
