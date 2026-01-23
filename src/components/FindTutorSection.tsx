@@ -34,7 +34,7 @@ const FindTutorSection = () => {
 
           {/* For Tutors */}
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-yellow mb-6">
               For Tutors
             </h2>
             <p className="text-white text-lg mb-8 max-w-md mx-auto">
@@ -45,9 +45,9 @@ const FindTutorSection = () => {
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold shadow-lg hover:opacity-95 transition text-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-secondary text-secondary-foreground font-semibold shadow-lg hover:opacity-95 transition text-lg"
             >
-              Register As A Tutor/Teacher <ArrowRight className="ml-1" />
+              Register as a tutor or teacher<ArrowRight className="ml-1" />
             </a>
           </div>
         </div>

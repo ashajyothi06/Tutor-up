@@ -9,18 +9,22 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import WorkshopGallerySection from '@/components/WorkGallery';
+import ITTrainingPlacementsSection from '@/components/ITTrainingPlacementsSection';
+import OnlineTutorGallerySection from '@/components/OnlineTutorGallerySection';
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
         <HeroSection />
-       
+       <CoursesSection />
         <AboutSection />
+        <ITTrainingPlacementsSection/>
         <WorkshopGallerySection/>
+        <OnlineTutorGallerySection/>
          <FindTutorSection />
         <ContentSection />
-        <CoursesSection />
+        
         <FeaturesSection />
         
         <TestimonialsSection />

@@ -78,18 +78,22 @@ const WorkshopGallerySection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-10">
-          <p className="text-3xl md:text-4xl text-foreground/80 font-medium tracking-wide">
-            Workshops
+          <p className="text-xl md:text-2xl text-foreground/80 font-medium tracking-wide">
+            Our Journey
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-3 leading-tight">
-            Conducted Across{" "}
+          {/* ✅ reduced main heading size */}
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 leading-snug">
+            Workshops Conducted Across{" "}
             <span className="text-gradient-cyan">Different Colleges</span>
           </h2>
 
-          <p className="text-muted-foreground text-lg mt-4 leading-relaxed">
-            Real college campuses. Real students. Real outcomes. Here’s a snapshot
-            of our workshops conducted across different colleges.
+          {/* ✅ updated description */}
+          <p className="text-muted-foreground text-base md:text-lg mt-4 leading-relaxed">
+            We proudly showcase our successful workshops conducted at various
+            colleges, engaging students and faculty through interactive sessions,
+            hands-on learning, and real-world skill development in technologies
+            like Power BI, Gen AI, Machine Learning, and Data Science.
           </p>
         </div>
 
@@ -132,17 +136,6 @@ const WorkshopGallerySection = () => {
               </div>
             </motion.article>
           ))}
-        </div>
-
-        {/* CTA row */}
-        <div className="mt-6 md:mt-8 flex items-center justify-center">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-br from-cyan to-teal text-secondary font-semibold shadow-lg hover:opacity-95 transition"
-          >
-            Book a Workshop for Your College
-            <span className="text-secondary/90">→</span>
-          </a>
         </div>
       </div>
     </section>
